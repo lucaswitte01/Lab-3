@@ -24,11 +24,11 @@ def reliable_spin(node, pub, msg, max_time=2.0):
 # Pulse commands are in units of ms
 
 # List of joint (id, command) pairs
-targets = [(1, 500),
-           (2, 750), # KEEP JOINT 2 BETWEEN 125 AND 775
-           (3, 40),
-           (4, 350),
-           (5, 500),
+targets = [(1, 500), # SHOULDER ROTATION
+           (2, 750), # SHOULDER HINGE -- KEEP JOINT 2 BETWEEN 125 AND 775
+           (3, 40), # ELBOW HINGE
+           (4, 350), # WRIST HINGE
+           (5, 500), # WRIST ROTATION
            (10, 350)] # Gripper joint. Keep below 650
 
 duration = 1.0 # Time to complete motion
